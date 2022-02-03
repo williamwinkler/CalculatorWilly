@@ -9,43 +9,51 @@ namespace Calculator
 {
     public class Calculator
     {
+        public double Accumulator { get; private set; }
         public Calculator()
         {
             Accumulator = 0;
         }
-        public double Add(double a, double b)
+        public double Add(double append)
         {
-            Accumulator = a + b;
+            Accumulator = Accumulator + append;
             return Accumulator;
         }
 
-        public double Subtract(double a, double b)
+        public double Subtract(double subtractor)
         {
-            Accumulator = a- b;
+            Accumulator = Accumulator - subtractor;
             return Accumulator;
         }
 
-        // Overload operators
+        public double Multiply(double multiplier)
+        {
+            Accumulator = Accumulator * multiplier;
+            return Accumulator;
+        }
+
+        public double Pow(double exponent)
+        {
+            Accumulator = Math.Pow(Accumulator, exponent);
+            return Accumulator;
+        }
+
+        public double Divide(double divisor)
+        {
+            if (divisor == 0)
+            {
+                throw new DivideByZeroException("Denominator cannot be zero.");
+            }
+            Accumulator = Accumulator/ divisor;
+            return Accumulator;
+        }
+
+        public void Clear()
+        {
+            Accumulator = 0;
+        }
+
        
-
-        public double Multiply(double a, double b)
-        {
-            Accumulator = a *b;
-            return Accumulator;
-        }
-        public double Pow(double a, double b)
-        {
-            Accumulator = Math.Pow(a, b);
-            return Accumulator;
-        }
-
-        public double Divide(double dividend, double divisor)
-        {
-            Accumulator = dividend / divisor;
-            return Accumulator;
-        }
-
-        public double Accumulator { get; private set; }
 
 
     }

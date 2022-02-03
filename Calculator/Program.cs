@@ -5,7 +5,8 @@
         static void Main(string[] args)
         {
             Calculator cal = new Calculator();
-            Console.WriteLine(cal.Add(5,5));
+
+            Console.WriteLine("The Accumulator has value: " + cal.Accumulator);
         }
     }
 }
