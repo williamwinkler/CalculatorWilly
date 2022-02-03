@@ -11,16 +11,18 @@ namespace Calculator
     {
         public Calculator()
         {
-
+            Accumulator = 0;
         }
         public double Add(double a, double b)
         {
-            return a + b;
+            Accumulator = a + b;
+            return Accumulator;
         }
 
         public double Subtract(double a, double b)
         {
-            return a - b;
+            Accumulator = a- b;
+            return Accumulator;
         }
 
         // Overload operators
@@ -28,12 +30,23 @@ namespace Calculator
 
         public double Multiply(double a, double b)
         {
-            return a * b;
+            Accumulator = a *b;
+            return Accumulator;
         }
         public double Pow(double a, double b)
         {
-            return Math.Pow(a, b);
+            Accumulator = Math.Pow(a, b);
+            return Accumulator;
         }
+
+        public double Divide(double dividend, double divisor)
+        {
+            Accumulator = dividend / divisor;
+            return Accumulator;
+        }
+
+        public double Accumulator { get; private set; }
+
 
     }
 
