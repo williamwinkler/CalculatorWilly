@@ -18,10 +18,20 @@ namespace Calculator
             return a + b;
         }
 
-        public double Substract(double a, double b)
+        public double Subtract(double a, double b)
         {
             return a - b;
         }
+
+        public double Multiply(double a, double b)
+        {
+            return a * b;
+        }
+        public double Pow(double a, double b)
+        {
+            return Math.Pow(a, b);
+        }
+
     }
 
  

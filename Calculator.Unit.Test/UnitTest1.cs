@@ -25,19 +25,19 @@ namespace Calculator.Unit.Test
         }
 
         [Test]
-        public void Calculator_Substract_tests()
+        public void Calculator_Subtract_tests()
         {
           
 
-            Assert.That(uut.Substract(5,5), Is.EqualTo(0));
-            Assert.That(uut.Substract(5, -3), Is.EqualTo(8));
+            Assert.That(uut.Subtract(5,5), Is.EqualTo(0));
+            Assert.That(uut.Subtract(5, -3), Is.EqualTo(8));
         }
 
         [Test]
         public void Calculator_Sub2_Test()
         {
-            Assert.That(uut.Substract(5, 5), Is.EqualTo(0));
-            Assert.That(uut.Substract(5, -3), Is.EqualTo(8));
+            Assert.That(uut.Subtract(5, 5), Is.EqualTo(0));
+            Assert.That(uut.Subtract(5, -3), Is.EqualTo(8));
         }
 
 
