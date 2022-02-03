@@ -26,7 +26,7 @@ namespace Calculator.Unit.Test
             uut.Add(3);
 
             // Assert
-            Assert.AreEqual(0, uut.Accumulator);
+            Assert.AreEqual(8, uut.Accumulator);
         }
 
         [Test]
@@ -130,6 +130,19 @@ namespace Calculator.Unit.Test
             
             // Assert
             Assert.Throws<DivideByZeroException>(() => uut.Divide(0));
+        }
+
+        [Test]
+        public void Clear_AccIs5ThenClear_result0()
+        {
+            // Arrange
+
+            // Act
+            uut.Add(5);
+            uut.Clear();
+
+            // Assert
+            Assert.AreEqual(0, uut.Accumulator);
         }
 
     }
