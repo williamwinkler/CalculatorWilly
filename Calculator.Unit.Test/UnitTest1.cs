@@ -32,5 +32,14 @@ namespace Calculator.Unit.Test
             Assert.That(uut.Substract(5,5), Is.EqualTo(0));
             Assert.That(uut.Substract(5, -3), Is.EqualTo(8));
         }
+
+        [Test]
+        public void Calculator_Sub2_Test()
+        {
+            Assert.That(uut.Substract(5, 5), Is.EqualTo(0));
+            Assert.That(uut.Substract(5, -3), Is.EqualTo(8));
+        }
+
+
     }
 }
