@@ -43,6 +43,19 @@ namespace Calculator.Unit.Test
         }
 
         [Test]
+        public void Add_add1000and1008_result2008()
+        {
+            // Arrange
+
+            // Act
+            uut.Add(1000);
+            uut.Add(1008);
+
+            // Assert
+            Assert.AreEqual(2008, uut.Accumulator);
+        }
+
+        [Test]
         public void Subtract_Add5Subtract5_result0()
         {
             // Arrange
@@ -69,6 +82,19 @@ namespace Calculator.Unit.Test
         }
 
         [Test]
+        public void Subtract_Minus100SubtractMinus5_resultMinus95()
+        {
+            // Arrange
+
+            // Act
+            uut.Subtract(100);
+            uut.Subtract(-5);
+
+            // Assert
+            Assert.AreEqual(-95, uut.Accumulator);
+        }
+
+        [Test]
         public void Multiply_5timesMinus3_resultMinus15()
         {
             // Arrange
@@ -79,6 +105,32 @@ namespace Calculator.Unit.Test
 
             // Assert
             Assert.AreEqual(-15, uut.Accumulator);
+        }
+
+        [Test]
+        public void Multiply_10times3dot5_result35()
+        {
+            // Arrange
+
+            // Act
+            uut.Add(10);
+            uut.Multiply(3.5);
+
+            // Assert
+            Assert.AreEqual(35, uut.Accumulator);
+        }
+
+        [Test]
+        public void Multiply_128times5dot5_result704()
+        {
+            // Arrange
+
+            // Act
+            uut.Add(128);
+            uut.Multiply(5.5);
+
+            // Assert
+            Assert.AreEqual(704, uut.Accumulator);
         }
 
         [Test]
@@ -108,6 +160,19 @@ namespace Calculator.Unit.Test
         }
 
         [Test]
+        public void Pow_10toThePowerOf0_result1()
+        {
+            // Arrange
+
+            // Act
+            uut.Add(10);
+            uut.Pow(0);
+
+            // Assert
+            Assert.AreEqual(1, uut.Accumulator);
+        }
+
+        [Test]
         public void Divide_5dividedWithMinus5_resultMinus1()
         {
             // Arrange
@@ -130,6 +195,19 @@ namespace Calculator.Unit.Test
             
             // Assert
             Assert.Throws<DivideByZeroException>(() => uut.Divide(0));
+        }
+
+        [Test]
+        public void Divide_100dividedWith2_result50()
+        {
+            // Arrange
+
+            // Act
+            uut.Add(100);
+            uut.Divide(2);
+
+            // Assert
+            Assert.AreEqual(50, uut.Accumulator);
         }
 
         [Test]

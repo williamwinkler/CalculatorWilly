@@ -52,11 +52,6 @@ namespace Calculator
         {
             Accumulator = 0;
         }
-
-       
-        // Test kode
-        // Test kode 2
-
     }
 
  
